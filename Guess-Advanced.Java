@@ -30,6 +30,15 @@ public class Guess {
 						System.out.println("You guessed correctly congradulations");
 						gameStats(turns);
 						again = newGame();
+						if(again == true) {
+							turns = 0;
+							roll=(int) rollDiceInt(range);
+							System.out.println(roll);							
+						}
+						else {
+							break;
+						}
+						
 					}else if(guess>roll) {
 						System.out.println("You guessed too high! Try again");
 					}else {
